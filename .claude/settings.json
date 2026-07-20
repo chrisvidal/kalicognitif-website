@@ -10,7 +10,10 @@
       "Bash(node -e \"console.log\\(require\\('./node_modules/astro/package.json'\\).engines\\)\")",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(magick -background \"#F5F5F5\" map-preview.svg -flatten map-preview.png)"
+      "Bash(magick -background \"#F5F5F5\" map-preview.svg -flatten map-preview.png)",
+      "Bash(which chromium *)",
+      "Read(//Applications/Google Chrome.app/Contents/MacOS/**)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --no-sandbox --screenshot=\"/private/tmp/claude-501/-Users-christophevidal-Sites-kalicognitif/633ada2d-b0d2-4b5c-8e6e-50d55b3e8596/scratchpad/hero-check.png\" --window-size=1440,900 \"http://localhost:4323/\")"
     ]
   }
 }
