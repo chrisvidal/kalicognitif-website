@@ -2,7 +2,8 @@
 const infos = [
   {
     titre: "Aucun prérequis",
-    description: "Adapté aux débutants complets comme aux salariés déjà sportifs.",
+    description:
+      "Adapté aux débutants complets comme aux salariés déjà sportifs.",
   },
   {
     titre: "Groupes de 4 à 12 participants",
@@ -15,14 +16,17 @@ const infos = [
   },
   {
     titre: "Sur site ou en salle",
-    description: "Intervention dans vos locaux ou en structure partenaire à proximité.",
+    description:
+      "Intervention dans vos locaux ou en structure partenaire à proximité.",
   },
 ];
 ---
 
-<section class="bg-mist px-6 py-20 sm:px-10 lg:px-16">
+<section class="px-6 py-20 sm:px-10 lg:px-16">
   <div class="mx-auto max-w-4xl">
-    <h2 class="text-center font-heading text-3xl font-extrabold text-ink sm:text-4xl">
+    <h2
+      class="text-center font-heading text-3xl font-extrabold text-ink sm:text-4xl"
+    >
       Infos pratiques
     </h2>
 
@@ -30,7 +34,9 @@ const infos = [
       {
         infos.map((info) => (
           <div class="rounded-xl bg-paper p-6 shadow-sm">
-            <h3 class="font-heading text-lg font-bold text-ink">{info.titre}</h3>
+            <h3 class="font-heading text-lg font-bold text-ink">
+              {info.titre}
+            </h3>
             <p class="mt-2 text-sm text-ink/70">{info.description}</p>
           </div>
         ))

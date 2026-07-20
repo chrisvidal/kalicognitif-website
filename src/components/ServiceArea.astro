@@ -6,7 +6,7 @@ const villes = [
 ];
 ---
 
-<section class="px-6 py-20 sm:px-10 lg:px-16">
+<section class="bg-mist px-6 py-20 sm:px-10 lg:px-16">
   <div class="mx-auto max-w-3xl text-center">
     <h2 class="font-heading text-3xl font-extrabold text-ink sm:text-4xl">
       Zone d'intervention
@@ -26,8 +26,7 @@ const villes = [
           stroke="#C1272D"
           stroke-opacity="0.25"
           stroke-width="10"
-          stroke-linecap="round"
-        ></path>
+          stroke-linecap="round"></path>
         <path
           d="M 90 130 C 220 100, 260 175, 330 155 C 400 135, 470 95, 545 110"
           fill="none"
@@ -35,13 +34,18 @@ const villes = [
           stroke-opacity="0.4"
           stroke-width="2"
           stroke-dasharray="2 8"
-          stroke-linecap="round"
-        ></path>
+          stroke-linecap="round"></path>
 
         {
           villes.map((ville) => (
             <g>
-              <circle cx={ville.x} cy={ville.y} r="14" fill="#C1272D" opacity="0.15" />
+              <circle
+                cx={ville.x}
+                cy={ville.y}
+                r="14"
+                fill="#C1272D"
+                opacity="0.15"
+              />
               <path
                 d={`M ${ville.x} ${ville.y - 22} c -11 0 -18 8 -18 18 c 0 13 18 30 18 30 s 18 -17 18 -30 c 0 -10 -7 -18 -18 -18 z`}
                 fill="#C1272D"

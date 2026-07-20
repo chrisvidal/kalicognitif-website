@@ -2,11 +2,13 @@
 const benefits = [
   {
     titre: "Concentration",
-    description: "Ancrage dans l'instant présent, focus mental sous contrainte physique.",
+    description:
+      "Ancrage dans l'instant présent, focus mental sous contrainte physique.",
   },
   {
     titre: "Gestion du stress",
-    description: "Défoulement structuré et apprentissage du calme sous pression.",
+    description:
+      "Défoulement structuré et apprentissage du calme sous pression.",
   },
   {
     titre: "Confiance en soi",
@@ -18,18 +20,22 @@ const benefits = [
   },
   {
     titre: "Coordination",
-    description: "Travail moteur et précision gestuelle, transférables au quotidien.",
+    description:
+      "Travail moteur et précision gestuelle, transférables au quotidien.",
   },
   {
     titre: "Fun",
-    description: "Une pratique conviviale et énergisante, loin de la routine du sport en salle.",
+    description:
+      "Une pratique conviviale et énergisante, loin de la routine du sport en salle.",
   },
 ];
 ---
 
-<section class="bg-mist px-6 py-20 sm:px-10 lg:px-16">
+<section class="px-6 py-20 sm:px-10 lg:px-16">
   <div class="mx-auto max-w-6xl">
-    <h2 class="text-center font-heading text-3xl font-extrabold text-ink sm:text-4xl">
+    <h2
+      class="text-center font-heading text-3xl font-extrabold text-ink sm:text-4xl"
+    >
       Les bénéfices pour vos équipes
     </h2>
 
@@ -40,7 +46,9 @@ const benefits = [
             <span class="flex h-10 w-10 items-center justify-center rounded-full bg-crimson font-heading font-bold text-paper">
               {index + 1}
             </span>
-            <h3 class="mt-4 font-heading text-lg font-bold text-ink">{benefit.titre}</h3>
+            <h3 class="mt-4 font-heading text-lg font-bold text-ink">
+              {benefit.titre}
+            </h3>
             <p class="mt-2 text-sm text-ink/70">{benefit.description}</p>
           </div>
         ))

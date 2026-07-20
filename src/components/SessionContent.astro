@@ -18,9 +18,11 @@ const items = [
 ];
 ---
 
-<section class="px-6 py-20 sm:px-10 lg:px-16">
+<section class="bg-mist px-6 py-20 sm:px-10 lg:px-16">
   <div class="mx-auto max-w-4xl">
-    <h2 class="text-center font-heading text-3xl font-extrabold text-ink sm:text-4xl">
+    <h2
+      class="text-center font-heading text-3xl font-extrabold text-ink sm:text-4xl"
+    >
       Le contenu des sessions
     </h2>
 
@@ -30,7 +32,9 @@ const items = [
           <li class="flex gap-4 rounded-xl bg-mist p-6">
             <span class="mt-1 h-2 w-2 flex-none rounded-full bg-crimson" />
             <div>
-              <h3 class="font-heading text-lg font-bold text-ink">{item.titre}</h3>
+              <h3 class="font-heading text-lg font-bold text-ink">
+                {item.titre}
+              </h3>
               <p class="mt-2 text-sm text-ink/70">{item.description}</p>
             </div>
           </li>
