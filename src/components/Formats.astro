@@ -11,14 +11,16 @@ const formats = [
     titre: "Atelier",
     duree: "1h30 - 2h",
     participants: "12 participants max",
-    description: "Une session plus approfondie pour explorer les techniques.",
+    description:
+      "Une session plus approfondie pour explorer les techniques. Peut inclure des exercices d'auto-défense sur demande.",
     dark: true,
   },
   {
     titre: "Cours régulier",
     duree: "1h",
     participants: "12 participants max",
-    description: "Un rendez-vous hebdomadaire fixe pour progresser durablement.",
+    description:
+      "Un ou plusieurs rendez-vous hebdomadaires fixes pour progresser durablement.",
     dark: false,
   },
 ];
@@ -26,7 +28,9 @@ const formats = [
 
 <section class="px-6 py-20 sm:px-10 lg:px-16">
   <div class="mx-auto max-w-6xl">
-    <h2 class="text-center font-heading text-3xl font-extrabold text-ink sm:text-4xl">
+    <h2
+      class="text-center font-heading text-3xl font-extrabold text-ink sm:text-4xl"
+    >
       Le format des sessions
     </h2>
 
@@ -40,13 +44,28 @@ const formats = [
             ]}
           >
             <h3 class="font-heading text-xl font-bold">{format.titre}</h3>
-            <p class:list={["mt-4 text-3xl font-extrabold font-heading", format.dark ? "text-crimson-light" : "text-crimson"]}>
+            <p
+              class:list={[
+                "mt-4 text-3xl font-extrabold font-heading",
+                format.dark ? "text-crimson-light" : "text-crimson",
+              ]}
+            >
               {format.duree}
             </p>
-            <p class:list={["mt-1 text-sm", format.dark ? "text-paper/70" : "text-ink/60"]}>
+            <p
+              class:list={[
+                "mt-1 text-sm",
+                format.dark ? "text-paper/70" : "text-ink/60",
+              ]}
+            >
               {format.participants}
             </p>
-            <p class:list={["mt-4 text-sm", format.dark ? "text-paper/85" : "text-ink/70"]}>
+            <p
+              class:list={[
+                "mt-4 text-sm",
+                format.dark ? "text-paper/85" : "text-ink/70",
+              ]}
+            >
               {format.description}
             </p>
           </div>

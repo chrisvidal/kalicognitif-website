@@ -1,5 +1,9 @@
 ---
-const villes = ["Angers", "Saumur", "Tours"];
+const villes = [
+  { nom: "Angers", x: 90, y: 130 },
+  { nom: "Saumur", x: 330, y: 155 },
+  { nom: "Tours", x: 545, y: 110 },
+];
 ---
 
 <section class="px-6 py-20 sm:px-10 lg:px-16">
@@ -7,15 +11,67 @@ const villes = ["Angers", "Saumur", "Tours"];
     <h2 class="font-heading text-3xl font-extrabold text-ink sm:text-4xl">
       Zone d'intervention
     </h2>
+    <p class="mt-3 text-ink/70">Maine-et-Loire &amp; Touraine</p>
 
-    <div class="mt-8 flex flex-wrap justify-center gap-4">
-      {
-        villes.map((ville) => (
-          <span class="rounded-full border-2 border-crimson px-6 py-2 font-heading font-bold text-crimson">
-            {ville}
-          </span>
-        ))
-      }
+    <div class="mt-10 rounded-xl bg-mist p-6 shadow-sm sm:p-10">
+      <svg
+        viewBox="0 0 620 230"
+        role="img"
+        aria-label="Carte schématique de la zone d'intervention le long de la Loire, entre Angers, Saumur et Tours"
+        class="mx-auto w-full max-w-2xl"
+      >
+        <path
+          d="M -10 150 C 120 120, 220 190, 330 160 C 440 130, 480 90, 630 100"
+          fill="none"
+          stroke="#C1272D"
+          stroke-opacity="0.25"
+          stroke-width="10"
+          stroke-linecap="round"
+        ></path>
+        <path
+          d="M 90 130 C 220 100, 260 175, 330 155 C 400 135, 470 95, 545 110"
+          fill="none"
+          stroke="#C1272D"
+          stroke-opacity="0.4"
+          stroke-width="2"
+          stroke-dasharray="2 8"
+          stroke-linecap="round"
+        ></path>
+
+        {
+          villes.map((ville) => (
+            <g>
+              <circle cx={ville.x} cy={ville.y} r="14" fill="#C1272D" opacity="0.15" />
+              <path
+                d={`M ${ville.x} ${ville.y - 22} c -11 0 -18 8 -18 18 c 0 13 18 30 18 30 s 18 -17 18 -30 c 0 -10 -7 -18 -18 -18 z`}
+                fill="#C1272D"
+              />
+              <circle cx={ville.x} cy={ville.y - 4} r="6" fill="#FFFFFF" />
+              <text
+                x={ville.x}
+                y={ville.y + 42}
+                text-anchor="middle"
+                class="font-heading"
+                font-weight="700"
+                font-size="20"
+                fill="#1A1A1A"
+              >
+                {ville.nom}
+              </text>
+            </g>
+          ))
+        }
+      </svg>
+
+      <ul class="mt-6 flex flex-wrap justify-center gap-4">
+        {
+          villes.map((ville) => (
+            <li class="rounded-full border-2 border-crimson px-6 py-2 font-heading font-bold text-crimson">
+              {ville.nom}
+            </li>
+          ))
+        }
+      </ul>
     </div>
   </div>
 </section>
