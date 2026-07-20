@@ -1,0 +1,77 @@
+---
+interface Props {
+  youtubeId: string;
+  titre: string;
+  description?: string;
+}
+
+const { youtubeId, titre, description } = Astro.props;
+const playLabel = `Lire la vidéo : ${titre}`;
+---
+
+<figure class="overflow-hidden rounded-xl bg-mist">
+  <lite-youtube
+    videoid={youtubeId}
+    playlabel={playLabel}
+    class="group relative block aspect-video w-full cursor-pointer overflow-hidden bg-ink"
+  >
+    <img
+      src={`https://i.ytimg.com/vi/${youtubeId}/hqdefault.jpg`}
+      alt={titre}
+      loading="lazy"
+      decoding="async"
+      class="absolute inset-0 h-full w-full object-cover opacity-80 transition-opacity group-hover:opacity-100"
+    />
+    <button
+      type="button"
+      aria-label={playLabel}
+      class="absolute inset-0 flex items-center justify-center"
+    >
+      <span
+        class="flex h-16 w-16 items-center justify-center rounded-full bg-crimson shadow-lg transition-transform group-hover:scale-110"
+      >
+        <svg viewBox="0 0 24 24" class="ml-1 h-6 w-6 fill-paper" aria-hidden="true">
+          <path d="M8 5v14l11-7z"></path>
+        </svg>
+      </span>
+    </button>
+  </lite-youtube>
+  <figcaption class="p-5">
+    <h3 class="font-heading text-lg font-bold text-ink">{titre}</h3>
+    {description && <p class="mt-1 text-sm text-ink/70">{description}</p>}
+  </figcaption>
+</figure>
+
+<script>
+  class LiteYoutube extends HTMLElement {
+    connectedCallback() {
+      this.addEventListener("click", () => this.activate(), { once: true });
+    }
+
+    activate() {
+      const videoId = this.getAttribute("videoid");
+      const label = this.getAttribute("playlabel") ?? "";
+      if (!videoId) return;
+
+      const iframe = document.createElement("iframe");
+      iframe.setAttribute(
+        "src",
+        `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`
+      );
+      iframe.setAttribute("title", label);
+      iframe.setAttribute("frameborder", "0");
+      iframe.setAttribute(
+        "allow",
+        "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      );
+      iframe.setAttribute("allowfullscreen", "");
+      iframe.className = "absolute inset-0 h-full w-full";
+
+      this.replaceChildren(iframe);
+    }
+  }
+
+  if (!customElements.get("lite-youtube")) {
+    customElements.define("lite-youtube", LiteYoutube);
+  }
+</script>

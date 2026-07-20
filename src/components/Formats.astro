@@ -1,0 +1,57 @@
+---
+const formats = [
+  {
+    titre: "Atelier découverte",
+    duree: "45 min",
+    participants: "12 participants max",
+    description: "Une première séance courte pour découvrir les disciplines.",
+    dark: false,
+  },
+  {
+    titre: "Atelier",
+    duree: "1h30 - 2h",
+    participants: "12 participants max",
+    description: "Une session plus approfondie pour explorer les techniques.",
+    dark: true,
+  },
+  {
+    titre: "Cours régulier",
+    duree: "1h",
+    participants: "12 participants max",
+    description: "Un rendez-vous hebdomadaire fixe pour progresser durablement.",
+    dark: false,
+  },
+];
+---
+
+<section class="px-6 py-20 sm:px-10 lg:px-16">
+  <div class="mx-auto max-w-6xl">
+    <h2 class="text-center font-heading text-3xl font-extrabold text-ink sm:text-4xl">
+      Le format des sessions
+    </h2>
+
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
+      {
+        formats.map((format) => (
+          <div
+            class:list={[
+              "rounded-xl p-8 text-center shadow-sm md:[&:nth-child(2)]:-translate-y-2",
+              format.dark ? "bg-ink text-paper" : "bg-mist text-ink",
+            ]}
+          >
+            <h3 class="font-heading text-xl font-bold">{format.titre}</h3>
+            <p class:list={["mt-4 text-3xl font-extrabold font-heading", format.dark ? "text-crimson-light" : "text-crimson"]}>
+              {format.duree}
+            </p>
+            <p class:list={["mt-1 text-sm", format.dark ? "text-paper/70" : "text-ink/60"]}>
+              {format.participants}
+            </p>
+            <p class:list={["mt-4 text-sm", format.dark ? "text-paper/85" : "text-ink/70"]}>
+              {format.description}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

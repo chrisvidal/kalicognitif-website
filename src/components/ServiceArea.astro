@@ -1,0 +1,21 @@
+---
+const villes = ["Angers", "Saumur", "Tours"];
+---
+
+<section class="px-6 py-20 sm:px-10 lg:px-16">
+  <div class="mx-auto max-w-3xl text-center">
+    <h2 class="font-heading text-3xl font-extrabold text-ink sm:text-4xl">
+      Zone d'intervention
+    </h2>
+
+    <div class="mt-8 flex flex-wrap justify-center gap-4">
+      {
+        villes.map((ville) => (
+          <span class="rounded-full border-2 border-crimson px-6 py-2 font-heading font-bold text-crimson">
+            {ville}
+          </span>
+        ))
+      }
+    </div>
+  </div>
+</section>

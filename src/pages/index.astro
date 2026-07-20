@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Intro from "../components/Intro.astro";
+import Benefits from "../components/Benefits.astro";
+import SessionContent from "../components/SessionContent.astro";
+import VideoGrid from "../components/VideoGrid.astro";
+import Formats from "../components/Formats.astro";
+import PracticalInfo from "../components/PracticalInfo.astro";
+import ServiceArea from "../components/ServiceArea.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+
+// Pour ajouter/modifier une vidéo : éditez uniquement ce tableau.
+const videos = [
+  {
+    id: "dQw4w9WgXcQ", // TODO: remplacer par le vrai ID YouTube
+    titre: "Présentation du Kali Cognitif",
+    description: "Découvrez le concept en 2 minutes.",
+  },
+  {
+    id: "dQw4w9WgXcQ", // TODO: remplacer par le vrai ID YouTube
+    titre: "Une session en entreprise",
+    description: "Immersion dans un atelier avec une équipe.",
+  },
+  {
+    id: "dQw4w9WgXcQ", // TODO: remplacer par le vrai ID YouTube
+    titre: "Techniques de Kali et de boxe",
+    description: "Aperçu des mouvements travaillés pendant les cours.",
+  },
+];
+---
+
+<Layout>
+  <Hero />
+  <Intro />
+  <Benefits />
+  <SessionContent />
+  <VideoGrid videos={videos} />
+  <Formats />
+  <PracticalInfo />
+  <ServiceArea />
+  <Contact />
+  <Footer />
+</Layout>
