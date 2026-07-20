@@ -5,7 +5,11 @@
       "Bash(magick -background \"#1A1A1A\" \"/private/tmp/claude-501/-Users-christophevidal-Sites-kalicognitif/633ada2d-b0d2-4b5c-8e6e-50d55b3e8596/scratchpad/og-image.svg\" -flatten public/images/og-image.jpg)",
       "Bash(magick identify *)",
       "Bash(npm run *)",
-      "Bash(pkill -f \"astro preview\")"
+      "Bash(pkill -f \"astro preview\")",
+      "Bash(gh run *)",
+      "Bash(node -e \"console.log\\(require\\('./node_modules/astro/package.json'\\).engines\\)\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
