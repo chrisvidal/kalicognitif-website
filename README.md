@@ -4,6 +4,65 @@ Landing page one-page pour Kali Cognitif, activité de coaching en arts martiaux
 anglaise) en entreprise. Construite avec [Astro](https://astro.build) en mode statique et
 [Tailwind CSS v4](https://tailwindcss.com).
 
+## Cloudflare
+
+kali-cognitif.fr
+nameservers:
+- johnathan.ns.cloudflare.com
+- marjory.ns.cloudflare.com
+
+
+## CRM — Prospection Kali Cognitif
+
+
+### Sport en entreprise
+
+- Angers - cd49.ffse@gmail.com
+  - [x] contact initial
+  - [ ] envoi plaquette
+
+- Tours - contact@lcse-sportentreprise.fr
+  - [x] contact initial
+  - [x] envoi plaquette
+
+### Maisons de quartier
+
+Annuaire SENACS (Système d'Échanges National des Centres Sociaux) pour avoir liste maisons de quartier - filtrable par département : senacs.fr, département 49.
+
+- Saumur
+  - Maison des Associations et de Quartier Jean Rostand
+    - 330 rue Emmanuel Clairefond, 49400 Saumur
+    - 📧 e.launay@ville-saumur.fr — 02 41 83 12 80
+    - [x] contact initial
+    - [x] envoi plaquette
+
+- Angers
+  - Maison de Quartier Angers Centre — 12 rue Thiers, 49100 Angers
+    -
+    - [ ] contact initial
+    - [ ] envoi plaquette
+
+  - L'Archipel Espace d'Animation — 13 bis bd Georges Clemenceau, 49000 Angers
+    - direction@larchipelasso.fr - accueil@larchipelasso.fr - https://larchipelasso.centres-sociaux.fr/ - 02 41 24 89 10
+    - [x] contact initial
+    - [x] envoi plaquette
+
+  - Maison Pour Tous Monplaisir — 3 rue de l'Écriture, 49000 Angers
+    - contact@mpt-monplaisir.fr - http://mpt-monplaisir.fr - 02 41 43 84 09
+    - [x] contact initial
+    - [x] envoi plaquette
+
+  - Les trois mats
+    - troismats.accueil@gmail.com - troismats.direction@gmail.com - +33 (0)2 41 66 02 02 - http://www.letroismats.fr
+    - [x] contact initial
+    - [x] envoi plaquette
+
+  - CENTRE SOCIAL JEAN VILAR ANGERS
+    - centre.jean-vilar@ville.angers.fr - http://www.angers.fr/vivre-a-angers/quartiers/roseraie/centre-jean-vilar/index.html
+    - [x] contact initial
+    - [x] envoi plaquette
+
+
 ## Développement local
 
 ```bash
