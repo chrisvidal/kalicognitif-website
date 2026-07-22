@@ -23,6 +23,15 @@ const formats = [
       "Un ou plusieurs rendez-vous hebdomadaires fixes pour progresser durablement.",
     dark: false,
   },
+  {
+    titre: "Journée Séminaire",
+    badge: "Agences & séminaires",
+    duree: "Sur-mesure",
+    participants: "Groupes multiples",
+    description:
+      "Module clé en main pour vos séminaires et journées de cohésion, sur site ou dans le lieu de votre événement (château, domaine viticole, salle de séminaire...).",
+    dark: false,
+  },
 ];
 ---
 
@@ -34,15 +43,21 @@ const formats = [
       Le format des sessions
     </h2>
 
-    <div class="mt-12 grid gap-6 md:grid-cols-3">
+    <div class="mt-12 grid gap-6 sm:grid-cols-2">
       {
         formats.map((format) => (
           <div
             class:list={[
-              "rounded-xl p-8 text-center shadow-sm md:[&:nth-child(2)]:-translate-y-2",
+              "relative rounded-xl p-8 text-center shadow-sm",
               format.dark ? "bg-ink text-paper" : "bg-mist text-ink",
+              format.badge && "border-2 border-crimson",
             ]}
           >
+            {format.badge && (
+              <span class="absolute -top-3 right-4 rounded-full bg-crimson px-3 py-1 font-heading text-xs font-bold uppercase tracking-wide text-paper">
+                {format.badge}
+              </span>
+            )}
             <h3 class="font-heading text-xl font-bold">{format.titre}</h3>
             <p
               class:list={[

@@ -6,6 +6,7 @@ import Benefits from "../components/Benefits.astro";
 import SessionContent from "../components/SessionContent.astro";
 import VideoGrid from "../components/VideoGrid.astro";
 import Formats from "../components/Formats.astro";
+import SeminarCallout from "../components/SeminarCallout.astro";
 import Concept from "../components/Concept.astro";
 import PracticalInfo from "../components/PracticalInfo.astro";
 import ServiceArea from "../components/ServiceArea.astro";
@@ -32,7 +33,7 @@ const videos = [
     titre: "Travail en mains nues",
     // titre: "Techniques de Kali et de boxe",
     description:
-      "Travail du cardio et du système reflexe avec notre programme de boxe anglaise intuitive.",
+      "Travail du cardio, du système reflexe et de la résilience avec notre programme de boxe intuitive.",
     // description: "Aperçu des mouvements travaillés pendant les cours.",
   },
 ];
@@ -46,6 +47,7 @@ const videos = [
   <SessionContent />
   <VideoGrid videos={videos} />
   <Formats />
+  <SeminarCallout />
   <PracticalInfo />
   <ServiceArea />
   <Contact />
