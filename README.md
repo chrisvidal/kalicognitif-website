@@ -63,6 +63,28 @@ Annuaire SENACS (Système d'Échanges National des Centres Sociaux) pour avoir l
     - [x] envoi plaquette
 
 
+### Agences Évènementielles / Séminaires
+- Hatch Event
+  - Angers (siège) + Grand Ouest : Saumur, Cholet, Tours, Nantes
+  - 06 59 12 94 12 — formulaire sur hatch-event.com/contact
+  - [x] contact initial
+  - [x] envoi plaquette
+- Agence Sensorielle
+  - Saumur, entre Angers et Tours
+  - contact@agencesensorielle.com — 02 41 52 65 44
+  - [x] contact initial
+  - [x] envoi plaquette
+- Loire Secrets
+  - Angers, Saumur, Tours, Nantes, Blois
+  - contact@loiresecrets.com — 02 41 91 94 76
+  - [x] contact initial
+  - [x] envoi plaquette
+- INNOV'events
+  - Angers, mentionne explicitement les caves troglodytiques du Saumurois
+  - eva@innov-events.fr - 09 67 71 73 13 (contact direct : Eva France)
+  - [x] contact initial
+  - [x] envoi plaquette
+
 ## Développement local
 
 ```bash
