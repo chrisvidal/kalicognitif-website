@@ -32,7 +32,7 @@ Annuaire SENACS (Système d'Échanges National des Centres Sociaux) pour avoir l
 - Saumur
   - Maison des Associations et de Quartier Jean Rostand
     - 330 rue Emmanuel Clairefond, 49400 Saumur
-    - 📧 e.launay@ville-saumur.fr — 02 41 83 12 80
+    - 📧 vieassociative@saumur.fr — 02 41 83 12 80
     - [x] contact initial
     - [x] envoi plaquette
 
