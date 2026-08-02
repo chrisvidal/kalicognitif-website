@@ -30,14 +30,18 @@ const playLabel = `Lire la vidéo : ${titre}`;
       <span
         class="flex h-16 w-16 items-center justify-center rounded-full bg-crimson shadow-lg transition-transform group-hover:scale-110"
       >
-        <svg viewBox="0 0 24 24" class="ml-1 h-6 w-6 fill-paper" aria-hidden="true">
+        <svg
+          viewBox="0 0 24 24"
+          class="ml-1 h-6 w-6 fill-paper"
+          aria-hidden="true"
+        >
           <path d="M8 5v14l11-7z"></path>
         </svg>
       </span>
     </button>
   </lite-youtube>
   <figcaption class="p-5">
-    <h3 class="font-heading text-lg font-bold text-ink">{titre}</h3>
+    <h3 class="text-lg font-bold text-ink">{titre}</h3>
     {description && <p class="mt-1 text-sm text-ink/70">{description}</p>}
   </figcaption>
 </figure>
@@ -56,13 +60,13 @@ const playLabel = `Lire la vidéo : ${titre}`;
       const iframe = document.createElement("iframe");
       iframe.setAttribute(
         "src",
-        `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`
+        `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`,
       );
       iframe.setAttribute("title", label);
       iframe.setAttribute("frameborder", "0");
       iframe.setAttribute(
         "allow",
-        "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
       );
       iframe.setAttribute("allowfullscreen", "");
       iframe.className = "absolute inset-0 h-full w-full";

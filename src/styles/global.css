@@ -8,13 +8,46 @@
   --color-crimson-light: #e85258;
   --color-mist: #f5f5f5;
 
-  --font-heading: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  /* --font-heading: "Poppins", ui-sans-serif, system-ui, sans-serif;
   --font-body-2: "Libertinus Serif", serif;
   ;
-  --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-body-3: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif; */
+
+  --font-body: "Avenir-Next", "Helvetica Neue", Helvetica, Roboto, sans-serif;
 }
 
 @layer base {
+
+  @font-face {
+    font-family: "Avenir-Next";
+    src: url("../fonts/avenir-next/AvenirNextLTPro-Regular.otf");
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: "Avenir-Next";
+    src: url("../fonts/avenir-next/AvenirNextLTPro-Medium.otf");
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: "Avenir-Next";
+    src: url("../fonts/avenir-next/AvenirNextLTPro-Demi.otf");
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: "Avenir-Next";
+    src: url("../fonts/avenir-next/AvenirNextLTPro-Bold.otf");
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: "Avenir-Next";
+    src: url("../fonts/avenir-next/AvenirNextLTPro-Heavy.otf");
+    font-weight: 900;
+  }
+
   html {
     @apply antialiased;
     scroll-behavior: smooth;
@@ -23,18 +56,24 @@
   body {
     @apply antialiased relative tracking-normal;
     font-family: var(--font-body);
+    font-weight: 500;
     background-color: var(--color-paper);
     color: var(--color-ink-light);
   }
 
-  .font-libertinus {
+  /*  .font-libertinus {
     font-family: var(--font-body-2);
-  }
+  } */
 
   h1,
   h2,
   h3,
   h4 {
-    font-family: var(--font-heading);
+    font-family: var(--font-body);
+  }
+
+  .text-highlight {
+    background-color: rgb(255, 242, 0);
+    opacity: 1;
   }
 }

@@ -8,10 +8,10 @@ const villes = [
 
 <section class="bg-mist px-6 py-20 sm:px-10 lg:px-16">
   <div class="mx-auto max-w-3xl text-center">
-    <h2 class="font-heading text-3xl font-extrabold text-ink sm:text-4xl">
+    <h2 class="text-3xl font-extrabold text-ink sm:text-4xl">
       Zone d'intervention
     </h2>
-    <p class="mt-3 text-ink/70">Maine-et-Loire &amp; Touraine</p>
+    <p class="mt-3 text-lg text-ink/70">Maine-et-Loire &amp; Touraine</p>
 
     <div class="mt-10 rounded-xl bg-mist p-6 shadow-sm sm:p-10">
       <svg
@@ -55,7 +55,7 @@ const villes = [
                 x={ville.x}
                 y={ville.y + 42}
                 text-anchor="middle"
-                class="font-heading"
+                class=""
                 font-weight="700"
                 font-size="20"
                 fill="#1A1A1A"
@@ -70,7 +70,7 @@ const villes = [
       <ul class="mt-6 flex flex-wrap justify-center gap-4">
         {
           villes.map((ville) => (
-            <li class="rounded-full border-2 border-crimson px-6 py-2 font-heading font-bold text-crimson">
+            <li class="rounded-full border-2 border-crimson px-6 py-2  font-bold text-crimson">
               {ville.nom}
             </li>
           ))

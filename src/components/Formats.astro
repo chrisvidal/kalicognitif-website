@@ -37,9 +37,7 @@ const formats = [
 
 <section class="bg-mist px-6 py-20 sm:px-10 lg:px-16">
   <div class="mx-auto max-w-6xl">
-    <h2
-      class="text-center font-heading text-3xl font-extrabold text-ink sm:text-4xl"
-    >
+    <h2 class="text-center text-3xl font-extrabold text-ink sm:text-4xl">
       Le format des sessions
     </h2>
 
@@ -54,14 +52,14 @@ const formats = [
             ]}
           >
             {format.badge && (
-              <span class="absolute -top-3 right-4 rounded-full bg-crimson px-3 py-1 font-heading text-xs font-bold uppercase tracking-wide text-paper">
+              <span class="absolute -top-3 right-4 rounded-full bg-crimson px-3 py-1  text-xs font-bold uppercase tracking-wide text-paper">
                 {format.badge}
               </span>
             )}
-            <h3 class="font-heading text-xl font-bold">{format.titre}</h3>
+            <h3 class=" text-xl font-bold">{format.titre}</h3>
             <p
               class:list={[
-                "mt-4 text-3xl font-extrabold font-heading",
+                "mt-4 text-3xl font-extrabold ",
                 format.dark ? "text-crimson-light" : "text-crimson",
               ]}
             >
@@ -77,7 +75,7 @@ const formats = [
             </p>
             <p
               class:list={[
-                "mt-4 text-sm",
+                "mt-4 text-base",
                 format.dark ? "text-paper/85" : "text-ink/70",
               ]}
             >
