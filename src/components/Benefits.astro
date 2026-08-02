@@ -1,31 +1,39 @@
 ---
 const benefits = [
   {
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23111827'/><circle cx='50' cy='50' r='22' fill='%23fbbf24'/></svg>",
     titre: "Concentration",
     description: "Ancrage dans l'instant présent,",
     description2: "focus mental sous contrainte physique.",
   },
   {
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>",
     titre: "Gestion du stress",
     description: "Défoulement structuré et ",
     description2: "apprentissage du calme sous pression.",
   },
   {
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>",
     titre: "Confiance en soi",
     description: "Progression technique visible,",
     description2: "sentiment de maîtrise.",
   },
   {
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23fafaf9'/><g fill='%2357534e'><circle cx='26' cy='26' r='9'/><circle cx='50' cy='26' r='9'/><circle cx='74' cy='26' r='9'/><circle cx='26' cy='50' r='9'/><circle cx='50' cy='50' r='9'/><circle cx='74' cy='50' r='9'/><circle cx='26' cy='74' r='9'/><circle cx='50' cy='74' r='9'/><circle cx='74' cy='74' r='9'/></g></svg>",
     titre: "Cohésion d'équipe",
     description: "Exercices en binôme qui",
     description2: "créent du lien entre collègues.",
   },
   {
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>",
     titre: "Coordination",
     description: "Travail moteur et précision gestuelle,",
     description2: "transférables au quotidien.",
   },
   {
+    icon2:
+      "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23fef3c7'/><circle cx='50' cy='50' r='20' fill='%23f59e0b'/><g stroke='%23f59e0b' stroke-width='8' stroke-linecap='round'><path d='M50 12v10M50 78v10M12 50h10M78 50h10M23 23l7 7M70 70l7 7M77 23l-7 7M30 70l-7 7'/></g></svg>",
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌈</text></svg>",
     titre: "Fun",
     description: "Une pratique conviviale et énergisante,",
     description2: "loin de la routine du sport en salle.",
@@ -33,7 +41,7 @@ const benefits = [
 ];
 ---
 
-<section class="px-6 py-20 sm:px-10 lg:px-16">
+<section class="px-6 py-20 sm:px-10 lg:px-16 bg-mist">
   <div class="mx-auto max-w-6xl">
     <h2 class="text-center text-3xl font-extrabold text-ink sm:text-4xl">
       Les bénéfices pour vos équipes
@@ -42,10 +50,23 @@ const benefits = [
     <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {
         benefits.map((benefit, index) => (
-          <div class="rounded-xl bg-paper p-6 shadow-md text-center">
-            <span class="mx-auto flex h-9 w-9 items-center justify-center rounded-full bg-crimson  font-bold text-paper">
+          <div
+            class="rounded-3xl border border-ink/5 bg-paper p-6 text-center"
+            style="box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 1px 4px rgba(0, 0, 0, 0.03), 0 12px 36px rgba(20, 40, 80, 0.07),
+    0 30px 60px rgba(20, 40, 80, 0.04)"
+          >
+            <img
+              src={benefit.icon}
+              alt=""
+              class="mx-auto w-14 h-14"
+              loading="lazy"
+              width="56"
+              height="56"
+            />
+            {/* <span class="mx-auto flex h-9 w-9 items-center justify-center rounded-full bg-crimson  font-bold text-paper">
               {index + 1}
-            </span>
+            </span> */}
             <h3 class="text-lg mt-3 font-bold text-ink">{benefit.titre}</h3>
             <p class="mt-2 text-base text-ink/80">{benefit.description}</p>
             <div class="inline-flex text-highlight px-1.5">
