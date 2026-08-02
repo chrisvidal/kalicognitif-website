@@ -46,10 +46,13 @@ const formats = [
         formats.map((format) => (
           <div
             class:list={[
-              "relative rounded-xl p-8 text-center shadow-sm",
+              "relative rounded-3xl p-8 text-center ",
               format.dark ? "bg-ink text-paper" : "bg-mist text-ink",
-              format.badge && "border-2 border-crimson",
+              format.badge ? "border-2 border-crimson" : "border border-ink/10",
             ]}
+            style="box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 1px 4px rgba(0, 0, 0, 0.03), 0 12px 36px rgba(20, 40, 80, 0.07),
+    0 30px 60px rgba(20, 40, 80, 0.04)"
           >
             {format.badge && (
               <span class="absolute -top-3 right-4 rounded-full bg-crimson px-3 py-1  text-xs font-bold uppercase tracking-wide text-paper">
